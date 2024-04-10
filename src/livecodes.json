@@ -1,0 +1,32 @@
+{
+  "title": "Untitled Project",
+  "description": "",
+  "head": "<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+  "htmlAttrs": "lang=\"en\" class=\"\"",
+  "tags": [],
+  "activeEditor": "script",
+  "markup": {
+    "language": "html",
+    "content": "<div class=\"container\">\n  <h1>Hello, <span id=\"title\">world</span>!</h1>\n  <img class=\"logo\" alt=\"logo\" src=\"https://code-1.padwork.ru/livecodes/assets/templates/php.svg\" />\n  <p>You clicked <span id=\"counter\">0</span> times.</p>\n  <button id=\"counter-button\">Click me</button>\n</div>\n"
+  },
+  "style": {
+    "language": "css",
+    "content": ".container,\n.container button {\n  text-align: center;\n  font: 1em sans-serif;\n}\n.logo {\n  width: 150px;\n}\n"
+  },
+  "script": {
+    "language": "php",
+    "content": "<?php\n$title = 'PHP';\n$document->getElementById('title')->innerText = $title;\n\n$count = 0;\n\n$document\n  ->getElementById('counter-button')\n  ->addEventListener('click', function () use (&$count, $document) {\n      $count += 1;\n      $document->getElementById('counter')->innerText = $count;\n      echo \"count: $count\";\n  });\n"
+  },
+  "stylesheets": [],
+  "scripts": [],
+  "cssPreset": "",
+  "processors": [],
+  "customSettings": {},
+  "imports": {},
+  "types": {},
+  "tests": {
+    "language": "typescript",
+    "content": ""
+  },
+  "version": "26"
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head><script>window.livecodes = window.livecodes || {};</script><title>Untitled Project</title><meta name="title" content="Untitled Project"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><style id="__livecodes_styles__">.container,
+.container button {
+  text-align: center;
+  font: 1em sans-serif;
+}
+.logo {
+  width: 150px;
+}
+</style><script src="https://unpkg.com/uniter@2.18.0/dist/uniter.js" defer=""></script></head><body><div class="container">
+  <h1>Hello, <span id="title">world</span>!</h1>
+  <img class="logo" alt="logo" src="https://code-1.padwork.ru/livecodes/assets/templates/php.svg">
+  <p>You clicked <span id="counter">0</span> times.</p>
+  <button id="counter-button">Click me</button>
+</div>
+<script type="text/x-uniter-php">/* <?php */
+$title = 'PHP';
+$document->getElementById('title')->innerText = $title;
+
+$count = 0;
+
+$document
+  ->getElementById('counter-button')
+  ->addEventListener('click', function () use (&$count, $document) {
+      $count += 1;
+      $document->getElementById('counter')->innerText = $count;
+      echo "count: $count";
+  });</script></body></html>
